@@ -10,7 +10,7 @@
 
     <div class="container">
         <h1>Signature Resizer Tool- By Formmate App</h1>
-        <p>Upload your signature, set the desired dimensions, and download the resized image.</p>
+        <p>Upload your signature, set the desired dimensions, and download the high-quality resized image.</p>
 
         <div class="tool-box">
             <!-- Step 1: Upload Section -->
@@ -21,13 +21,20 @@
 
             <!-- Step 2: Dimension Inputs -->
             <div class="input-section">
-                <label>2. Set New Dimensions (in pixels):</label>
-                <div class="dimension-inputs">
-                    <input type="number" id="width-input" placeholder="Width">
-                    <span>x</span>
-                    <input type="number" id="height-input" placeholder="Height">
+                <label>2. Set New Dimensions:</label>
+                <div class="dimension-controls">
+                    <div class="dimension-inputs">
+                        <input type="number" id="width-input" placeholder="Width" step="0.01">
+                        <span>x</span>
+                        <input type="number" id="height-input" placeholder="Height" step="0.01">
+                    </div>
+                    <select id="unit-selector">
+                        <option value="px" selected>Pixels (px)</option>
+                        <option value="in">Inches (in)</option>
+                        <option value="cm">Centimeters (cm)</option>
+                    </select>
                 </div>
-                <div class="aspect-ratio-lock">
+                 <div class="aspect-ratio-lock">
                     <input type="checkbox" id="aspect-lock" checked>
                     <label for="aspect-lock">Maintain aspect ratio</label>
                 </div>
@@ -40,7 +47,8 @@
             <div id="result-section" class="result-section hidden">
                 <h2>Resized Signature Preview</h2>
                 <canvas id="result-canvas"></canvas>
-                <a id="download-btn" class="action-btn download-btn hidden" download="resized-signature.png">Download Image</a>
+                <div id="pixel-dimensions"></div>
+                <a id="download-btn" class="action-btn download-btn hidden" download="resized-signature.png">Download High-Quality Image</a>
             </div>
         </div>
     </div>
