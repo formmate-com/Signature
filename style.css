@@ -50,13 +50,15 @@ p {
 }
 
 input[type="file"],
-input[type="number"] {
+input[type="number"],
+select {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 6px;
     box-sizing: border-box;
     font-size: 16px;
+    background-color: #fff;
 }
 
 input[type="file"] {
@@ -64,7 +66,13 @@ input[type="file"] {
     cursor: pointer;
 }
 
+.dimension-controls {
+    display: flex;
+    gap: 15px;
+}
+
 .dimension-inputs {
+    flex-grow: 1;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -73,6 +81,10 @@ input[type="file"] {
 .dimension-inputs span {
     font-size: 18px;
     color: #777;
+}
+
+#unit-selector {
+    width: 150px; /* Fixed width for the dropdown */
 }
 
 .aspect-ratio-lock {
@@ -125,6 +137,13 @@ input[type="file"] {
     border-radius: 8px;
     max-width: 100%;
     margin-top: 15px;
+}
+
+#pixel-dimensions {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
 }
 
 /* Utility Class */
