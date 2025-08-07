@@ -1,0 +1,133 @@
+/* General Styling */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Tool Box Styling */
+.tool-box {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input-section {
+    text-align: left;
+}
+
+.input-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+input[type="file"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input[type="file"] {
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.dimension-inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dimension-inputs span {
+    font-size: 18px;
+    color: #777;
+}
+
+.aspect-ratio-lock {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #444;
+}
+
+/* Button Styling */
+.action-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    transition: background-color 0.3s;
+}
+
+.action-btn:hover {
+    background-color: #0056b3;
+}
+
+.download-btn {
+    margin-top: 20px;
+    background-color: #28a745;
+}
+
+.download-btn:hover {
+    background-color: #218838;
+}
+
+/* Result Section */
+.result-section {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+#result-canvas {
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    max-width: 100%;
+    margin-top: 15px;
+}
+
+/* Utility Class */
+.hidden {
+    display: none;
+}
