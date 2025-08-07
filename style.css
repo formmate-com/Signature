@@ -5,7 +5,7 @@ body {
     color: #333;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Changed to flex-start for better mobile view */
     min-height: 100vh;
     padding: 20px;
     margin: 0;
@@ -69,6 +69,7 @@ input[type="file"] {
 .dimension-controls {
     display: flex;
     gap: 15px;
+    align-items: center; /* Vertically align items */
 }
 
 .dimension-inputs {
@@ -84,7 +85,7 @@ input[type="file"] {
 }
 
 #unit-selector {
-    width: 150px; /* Fixed width for the dropdown */
+    width: 150px; /* Fixed width for the dropdown on desktop */
 }
 
 .aspect-ratio-lock {
@@ -149,4 +150,26 @@ input[type="file"] {
 /* Utility Class */
 .hidden {
     display: none;
+}
+
+
+/* --- ✨ RESPONSIVE STYLES FOR MOBILE DEVICES ✨ --- */
+/* This block will apply only when the screen width is 600px or less */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Slightly smaller heading */
+    }
+    
+    .dimension-controls {
+        flex-direction: column; /* Stack the inputs and dropdown vertically */
+        align-items: stretch; /* Make them take full width */
+    }
+
+    #unit-selector {
+        width: 100%; /* Make dropdown full width on mobile */
+    }
 }
