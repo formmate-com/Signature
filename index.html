@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature Resizer Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Signature Resizer Tool- By Formmate App</h1>
+        <p>Upload your signature, set the desired dimensions, and download the resized image.</p>
+
+        <div class="tool-box">
+            <!-- Step 1: Upload Section -->
+            <div class="input-section">
+                <label for="signature-upload">1. Upload Your Signature Image:</label>
+                <input type="file" id="signature-upload" accept="image/png, image/jpeg, image/jpg">
+            </div>
+
+            <!-- Step 2: Dimension Inputs -->
+            <div class="input-section">
+                <label>2. Set New Dimensions (in pixels):</label>
+                <div class="dimension-inputs">
+                    <input type="number" id="width-input" placeholder="Width">
+                    <span>x</span>
+                    <input type="number" id="height-input" placeholder="Height">
+                </div>
+                <div class="aspect-ratio-lock">
+                    <input type="checkbox" id="aspect-lock" checked>
+                    <label for="aspect-lock">Maintain aspect ratio</label>
+                </div>
+            </div>
+
+            <!-- Step 3: Action Button -->
+            <button id="resize-btn" class="action-btn">Resize Signature</button>
+
+            <!-- Step 4: Result Section -->
+            <div id="result-section" class="result-section hidden">
+                <h2>Resized Signature Preview</h2>
+                <canvas id="result-canvas"></canvas>
+                <a id="download-btn" class="action-btn download-btn hidden" download="resized-signature.png">Download Image</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
